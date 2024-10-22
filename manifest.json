@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Polite Ad Skip",
+    "description": "Ad-skipping extension to skip ads ethically",
+    "version": "1.0",
+    "action": {
+      "default_popup": "popup/popup.html",
+      "default_icon": "images/PoliteSkip.png"
+    },
+
+    "content_scripts": [
+        {
+            "js": ["scripts/content.js"],
+            "matches": [
+                "https://www.youtube.com/watch*"
+            ]
+        }
+    ]
+  }
