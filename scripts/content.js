@@ -1,14 +1,13 @@
-
 const muteButton = document.querySelector("button.ytp-mute-button");
 const observer = new MutationObserver((m) => {
     m.forEach((mut) => {
         if (mut.type === 'attributes'){
             let vidString = mut.target.className;
             if(vidString.indexOf('ad-showing') !== -1){
-                console.log("Ad is showing");
                 if(muteButton.getAttribute("data-title-no-tooltip") === "Mute"){
                     muteButton.click();
                 }
+                
             }
             else{
                 if(muteButton.getAttribute("data-title-no-tooltip") === "Unmute"){
